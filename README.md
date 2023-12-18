@@ -50,3 +50,8 @@ pip install tensorflow
 python main.py
 ```
 ### 2. Inference result
+
+The next video shows the result of running our ANPR/ALPR model
+
+https://github.com/kby-ai/Automatic-License-Plate-Recognition/assets/125717930/69ea987b-db44-406e-997f-4568ccf9be8c
+
