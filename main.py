@@ -1,7 +1,4 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Python script for ANPR/ALPR model inference in both static image and video mode.
 
 import cv2
 import numpy as np
