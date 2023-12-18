@@ -16,5 +16,37 @@ https://github.com/kby-ai/Product
 
 ## Overview
 
-We implemented ANPR/ALPR(Automatic Number/License Plate Recognition) engine with unmatched accuracy and precision by applying SOTA(State-of-the-art) deep learning techniques in this repository
+We implemented ANPR/ALPR(Automatic Number/License Plate Recognition) engine with unmatched accuracy and precision by applying SOTA(State-of-the-art) deep learning techniques in this repository. 
 This repository demonstrates ANPR/ALPR model inference in Linux server.
+
+## Model Weights
+
+To run this repository, model weights are needed.
+
+- To request a model weights, please contact us:
+```
+Email: contact@kby-ai.com
+
+Telegram: @kbyai
+
+WhatsApp: +19092802609
+
+Skype: live:.cid.66e2522354b1049b
+```
+
+## About Repository
+
+### 1. Set up
+1. Clone this repository to local or server machine.
+
+2. Install python 3.9 or later version
+
+3. Install dependencies using 'pip' command
+```
+pip install tensorflow
+```
+4. Run inference
+```
+python main.py
+```
+### 2. Inference result
