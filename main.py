@@ -1,7 +1,4 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# Python script for ANPR/ALPR model inference in both static image and video mode.
 
 import cv2
 import numpy as np
@@ -10,8 +7,8 @@ import os
 import tensorflow as tf
 from deskew_image import *
 
-PATH_DETECT_CKPT = 'models/detect.pb'
-PATH_RECOG_CKPT = 'models/recog.pb'
+PATH_DETECT_CKPT = 'path to detection model weight file'
+PATH_RECOG_CKPT = 'path to recognition model weight file'
 
 char_maps = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
