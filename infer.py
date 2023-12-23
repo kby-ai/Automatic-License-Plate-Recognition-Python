@@ -1,4 +1,7 @@
-# Python script for ANPR/ALPR model inference in both static image and video mode.
+# This is a sample Python script.
+
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 import cv2
 import numpy as np
@@ -7,8 +10,8 @@ import os
 import tensorflow as tf
 from deskew_image import *
 
-PATH_DETECT_CKPT = 'path to detection model weight file'
-PATH_RECOG_CKPT = 'path to recognition model weight file'
+PATH_DETECT_CKPT = 'models/detect.pb'
+PATH_RECOG_CKPT = 'models/recog.pb'
 
 char_maps = ['', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
@@ -168,70 +171,24 @@ def read_video_file(video_path: str):
     video_fps = float(cap.get(cv2.CAP_PROP_FPS))
     return cap, video_fps
 
-def img_infer():
+def img_infer(file_name):
 
 	global detection_graph
 	global detect_sess
 	global	recog_graph
 	global recog_sess
-
-	file_name = "test/test1.jpg"
-	image = cv2.imread(file_name, cv2.IMREAD_COLOR)
-	image = cv2.resize(image, (1024, 640))
+	file_bytes = np.frombuffer(file_name, np.uint8)
+	image = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+	
 	if image is None:
 		print('image is null')
 		sys.exit()
-
+	image = cv2.resize(image, (1024, 640))
 	detection_graph, detect_sess = load_detect_graph()
 	recog_graph, recog_sess = load_recog_graph()
 		
-	recog_results, recog_boxes, vehicle_boxes = recognition_license_plate(image)
-	for i in range(len(recog_results)) :
-		print(file_name, recog_results[i], recog_boxes[i])
-		image = plot_one_box(recog_boxes[i], image, label=recog_results[i], color=[0, 255, 0], line_thickness=1)
-		cv2.rectangle(image, (vehicle_boxes[i][0], vehicle_boxes[i][1]), (vehicle_boxes[i][2], vehicle_boxes[i][3]), (200, 200, 200), 2)
-
-	cv2.imshow("output", image)
-	# Waiting 0ms for user to press any key 
-	cv2.waitKey(0) 
-  
-	# Destroying all windows open on screen 
-	cv2.destroyAllWindows() 
-
-def video_infer():
-
-	global detection_graph
-	global detect_sess
-	global	recog_graph
-	global recog_sess
-
-	video_path = "input.mp4"
-	cap, cap_fps = read_video_file(video_path)
-	dt = 1 / cap_fps
+	return recognition_license_plate(image)
 	
-	output = cv2.VideoWriter("output.avi", cv2.VideoWriter_fourcc(*'MPEG'), cap_fps, (1024, 640)) 
-	while True:
-		ret, frame = cap.read()
-		if not ret:
-			break
-		frame = cv2.resize(frame, (1024, 640))	
-		detection_graph, detect_sess = load_detect_graph()
-		recog_graph, recog_sess = load_recog_graph()
-			
-		recog_results, recog_boxes, vehicle_boxes = recognition_license_plate(frame)
-		for i in range(len(recog_results)) :
-			frame = plot_one_box(recog_boxes[i], frame, label=recog_results[i], color=[0, 255, 0], line_thickness=1)
-			cv2.rectangle(frame, (vehicle_boxes[i][0], vehicle_boxes[i][1]), (vehicle_boxes[i][2], vehicle_boxes[i][3]), (200, 200, 200), 2)
-		output.write(frame)
-
-		# cv2.imshow("output", frame)
-		# stop demo by pressing 'q'
-		if cv2.waitKey(int(1000 * dt)) & 0xFF == ord('q'):
-			break
-	
-	cv2.destroyAllWindows()
-	output.release()
-	cap.release()
 		
 
 if __name__ == '__main__':
@@ -245,9 +202,5 @@ if __name__ == '__main__':
 	recog_graph = None
 	recog_sess = None
 
-	mode = 1 # 1: static image, 0: video
-	if mode:
-		img_infer()
-	else:
-		video_infer()
+	img_infer("")
 	
