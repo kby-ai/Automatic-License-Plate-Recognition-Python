@@ -54,9 +54,7 @@ pip install tensorflow
 ```
 python main.py
 ```
-### 2. Inference result
+### 2. Performance Video
 
-The next video shows the result of running our ANPR/ALPR model
-
-https://github.com/kby-ai/Automatic-License-Plate-Recognition/assets/125717930/69ea987b-db44-406e-997f-4568ccf9be8c
-
+You can visit our YouTube video for ANPR/ALPR model's performance[here](https://www.youtube.com/watch?v=GjMAi5J9eXA) to see how well our demo app works.</br>
+[![ANPR/ALPR Demo](https://img.youtube.com/vi/GjMAi5J9eXA/0.jpg)](https://www.youtube.com/watch?v=GjMAi5J9eXA)</br>
