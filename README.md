@@ -4,13 +4,10 @@
   </a>  
 </p>
 
-👏 Product List
-
-https://github.com/kby-ai/Product
-
-👏  We have published ANPR/ALPR SDK for the server.
-
-  - [ANPR/ALPR-Server](https://github.com/kby-ai/Automatic-License-Plate-Recognition)
+#### 📚 Product & Resources - [Here](https://github.com/kby-ai/Product)
+#### 🛟 Help Center - [Here](https://docs.kby-ai.com)
+#### 💼 KYC Verification Demo - [Here](https://github.com/kby-ai/KYC-Verification-Demo-Android)
+#### 🙋‍♀️ Docker Hub - [Here](https://hub.docker.com/u/kbyai)
 
 # Automatic-License-Plate-Recognition
 
@@ -20,22 +17,18 @@ We implemented ANPR/ALPR(Automatic Number/License Plate Recognition) engine with
 This repository demonstrates ANPR/ALPR model inference in Linux server.
 
 ## Online Test Demo
-KBY-AI ALPR Online Test: https://web.kby-ai.com/
+To try KBY-AI ALPR Online Test, please visit [here](https://web.kby-ai.com/)
 
 ## Model Weights
 
 To run this repository, model weights are needed.
 
-- To request a model weights, please contact us:
+- To request model weights, please contact us:
 ```
 Email: contact@kby-ai.com
-
 Telegram: @kbyai
-
 WhatsApp: +19092802609
-
 Skype: live:.cid.66e2522354b1049b
-
 Facebook: https://www.facebook.com/KBYAI
 ```
 
@@ -47,11 +40,11 @@ Facebook: https://www.facebook.com/KBYAI
 2. Install python 3.9 or later version
 
 3. Install dependencies using 'pip' command
-```
+```bash
 pip install tensorflow
 ```
 4. Run inference
-```
+```bash
 python main.py
 ```
 ### 2. Performance Video
