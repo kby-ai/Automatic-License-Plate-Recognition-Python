@@ -23,14 +23,12 @@ To try KBY-AI ALPR Online Test, please visit [here](https://web.kby-ai.com/)
 
 To run this repository, model weights are needed.
 
-- To request model weights, please contact us:
-```
-Email: contact@kby-ai.com
-Telegram: @kbyai
-WhatsApp: +19092802609
-Skype: live:.cid.66e2522354b1049b
-Facebook: https://www.facebook.com/KBYAI
-```
+- To request model weights, please contact us:</br>
+🧙`Email:` contact@kby-ai.com</br>
+🧙`Telegram:` @kbyai</br>
+🧙`WhatsApp:` +19092802609</br>
+🧙`Skype:` live:.cid.66e2522354b1049b</br>
+🧙`Facebook:` https://www.facebook.com/KBYAI</br>
 
 ## About Repository
 
