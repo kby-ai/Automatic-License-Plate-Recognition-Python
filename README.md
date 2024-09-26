@@ -16,7 +16,7 @@
 We implemented `ANPR/ALPR(Automatic Number/License Plate Recognition)` engine with unmatched accuracy and precision by applying `SOTA(State-of-the-art)` deep learning techniques in this repository. 
 This repository demonstrates `ANPR/ALPR` model inference in `Linux` server.
 
-KBY-AI's `LPR` solutions utilizes artificial intelligence and machine learning to greatly surpass legacy solutions. Now, in real-time, users can receive a vehicle's plate number, make, model, color, and direction of travel.
+KBY-AI's `LPR` solutions utilizes artificial intelligence and machine learning to greatly surpass legacy solutions. Now, in real-time, users can receive a vehicle's plate number.
 
 The `ALPR` system consists of the following steps:
 - Vehicle image capture
