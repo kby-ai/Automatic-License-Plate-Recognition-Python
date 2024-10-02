@@ -70,3 +70,5 @@ You can visit our YouTube video for ANPR/ALPR model's performance [here](https:/
 - Catching speeders by comparing the average time it takes to get from stationary camera A to stationary camera B
 - Determining what cars do and do not belong in a parking garage
 - Expediting parking by eliminating the need for human confirmation of parking passes
+
+[![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Fkby-ai%2FAutomatic-License-Plate-Recognition-Python&countColor=%23263759)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fkby-ai%2FAutomatic-License-Plate-Recognition-Python)
