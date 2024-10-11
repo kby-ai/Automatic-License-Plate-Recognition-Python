@@ -30,7 +30,7 @@ The `ALPR` system consists of the following steps:
 The `ALPR` system works in these strides, the initial step is the location of the vehicle and capturing a vehicle image of front or back perspective of the vehicle, the second step is the localization of Number Plate and then extraction of vehicle Number Plate is an image. The final stride uses image segmentation strategy, for the segmentation a few techniques neural network, mathematical morphology, color analysis and histogram analysis. Segmentation is for individual character recognition. Optical Character Recognition (OCR) is one of the strategies to perceive the every character with the assistance of database stored for separate alphanumeric character.
 
 ## Online Test Demo
-To try KBY-AI ALPR Online Test, please visit [here](https://web.kby-ai.com/)
+To try `KBY-AI` `ALPR` online, please visit [here](https://web.kby-ai.com/)
 
 ## Model Weights
 
@@ -48,9 +48,9 @@ To run this repository, model weights are needed.
 ### 1. Set up
 1. Clone this repository to local or server machine.
 
-2. Install python 3.9 or later version
+2. Install `python 3.9` or later version
 
-3. Install dependencies using 'pip' command
+3. Install dependencies using `pip` command
 ```bash
 pip install tensorflow
 ```
@@ -60,7 +60,7 @@ python main.py
 ```
 ### 2. Performance Video
 
-You can visit our YouTube video for ANPR/ALPR model's performance [here](https://www.youtube.com/watch?v=sLBYxgMdXlA) to see how well our demo app works.</br></br>
+You can visit our YouTube video for `ANPR/ALPR` model's performance [here](https://www.youtube.com/watch?v=sLBYxgMdXlA) to see how well our demo app works.</br></br>
 [![ANPR/ALPR Demo](https://img.youtube.com/vi/sLBYxgMdXlA/0.jpg)](https://www.youtube.com/watch?v=sLBYxgMdXlA)</br>
 
 ## Application of ALPR
